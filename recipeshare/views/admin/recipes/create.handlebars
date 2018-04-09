@@ -1,0 +1,23 @@
+<h1 class="text-center">create form</h1>
+<form action="/admin/recipes/create" class="text-center" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+      <input required name="title" type="text" id="title" class="text-center form-control" placeholder="Enter title">
+  </div>
+  <div class="form-group">
+      <label for="file">File upload</label>
+      <input type="file" name="file" class="form-controll">
+   </div>
+  <div class="form-group">
+      <label for="allowComments" class="form-check-label">
+      <input name="allowComments" type="checkbox" class="text-center form-control" id="allowComments">
+         Allow Comments
+      </label>
+   </div>
+   <div class="form-group">
+      <textarea required name="short" id="short" class="text-center form-control" placeholder="Enter short description"></textarea>
+   </div>
+   <div class="form-group">
+      <textarea required name="body" id="body" class="text-center form-control" placeholder="Enter description"></textarea>
+   </div>
+   <button type="submit" class="btn btn-primary">Create Recipe</button>
+</form>

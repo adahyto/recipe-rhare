@@ -1,0 +1,27 @@
+<h1>all recipes list page</h1>
+<table class="table table-boardered">
+  <thead>
+    <tr>
+      <th>photo</th>
+      <th>title</th>
+      <th>allowComments</th>
+      <th>short</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each recipes}}
+      <tr>
+        <td><img style="height:45px;" class="img-responsive" src="/uploads/{{file}}" alt=""></td>
+        <td>{{title}}</td>
+        <td>{{allowComments}}</td>
+        <td>{{short}}</td>
+        <td><a href="/admin/recipes/edit/{{id}}" class="btn btn-info">Edit</a></td>
+        <td>
+          <form action="/admin/recipes/{{id}}?_method=DELETE" method="post">
+            <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

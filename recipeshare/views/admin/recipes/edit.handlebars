@@ -1,0 +1,19 @@
+<h1 class="text-center">edit form</h1>
+<form action="/admin/recipes/edit/{{recipe.id}}?_method=PUT" class="text-center" method="post">
+  <div class="form-group">
+      <input required name="title" type="text" class="text-center form-control" id="title" value="{{recipe.title}}">
+  </div>
+  <div class="form-group">
+        <label for="allowComments" class="form-check-label">
+        <input name="allowComments" type="checkbox" {{#if recipe.allowComments}} checked="checked" {{/if}} class="form-control" id="allowComments">
+           Allow Comments
+        </label>
+  </div>
+  <div class="form-group">
+      <textarea required name="short" class="text-center form-control" id="short">{{recipe.short}}</textarea>
+  </div>
+  <div class="form-group">
+      <textarea required name="body" class="text-center form-control" id="body">{{recipe.body}}</textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Update Recipe</button>
+</form>
