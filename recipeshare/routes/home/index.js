@@ -71,7 +71,7 @@ passport.use(new LocalStrategy({usernameField: 'email'}, (email, password, done)
 
 /*passport.use(new GoogleStrategy({
     clientID: '177626534674-0estjm9pmru2njl7j5ehfbp6euj4aofu.apps.googleusercontent.com',
-    clientSecret: 'o9i2YVl76mc2oWKv6C6Ozg0g',
+    clientSecret: 'x',
     callbackURL: "/auth/google/callback"
   },
   (token, tokenSecret, profile, done)=>{
