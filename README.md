@@ -10,6 +10,8 @@ Containing profile board with recipes, recipes likes, easy recipe sending&saving
 
 IDEAS:
 -Vegan mentoring program 
+
 -Help vegan begginners using recipe sharing, chat & sharing diet calendar.
+
 -Vegan freelancer wall.
 
