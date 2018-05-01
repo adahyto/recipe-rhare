@@ -21,13 +21,14 @@ Idea is to also create :
 
 
 Installation:
-
--run mongodb
+- install MongoDb
+$ sudo apt install mongodb-server
+-run MongoDb
 $ mongod
 
 -run the app
 $ npm i
-$ nodemon app.js
+$ npm start
 
 
 
