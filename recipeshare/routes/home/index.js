@@ -5,7 +5,7 @@ const User = require('../../models/User');
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
-/*const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;*/
+const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
 router.all('/*', (req, res, next)=>{
   req.app.locals.layout = 'home';
@@ -69,29 +69,30 @@ passport.use(new LocalStrategy({usernameField: 'email'}, (email, password, done)
     });
 }));
 
-/*passport.use(new GoogleStrategy({
-    clientID: '177626534674-0estjm9pmru2njl7j5ehfbp6euj4aofu.apps.googleusercontent.com',
+passport.use(new GoogleStrategy({
+    clientID: 'x',
     clientSecret: 'x',
     callbackURL: "/auth/google/callback"
   },
   (token, tokenSecret, profile, done)=>{
-    User.findOne({nickName: profile.displayName})
+    User.findOne({googleId: profile.id})
       .then(user=>{
         if(!user){
           const newUser = new User({
-            nickName: profile.displayName,
-            email: 'gmailUser'
+            googleId: profile.id,
+            nickName: profile.displayName
           });
           newUser.save().then(savedUser=>{
             return savedUser;
           });
         }else{
-            console.log('user already registered?');
+            console.log('user already registered');
+            // LOGIN THAT USER
         }
       });
       console.log(profile);
   }
-));*/
+));
 
 passport.serializeUser(function(user, done){
   done(null, user.id);
@@ -111,13 +112,13 @@ router.post('/login', (req, res, next)=>{
   })(req, res, next);
 });
 
-/*router.get('/auth/google',
+router.get('/auth/google',
   passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login'] })
 );
 router.get('/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/login' }), (req, res)=>{
     res.redirect('/admin');
-});*/
+});
 
 router.get('/logout', (req, res)=>{
   req.logOut();
