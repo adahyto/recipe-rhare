@@ -6,9 +6,11 @@ const UserSchema = new Schema({
     type: String,
     required: true
   },
+  googleId: {
+    type: String
+  },
   email: {
     type: String,
-    required: true
   },
   password: {
     type: String
