@@ -5,11 +5,12 @@ const Recipe = require('../../models/Recipe');
 const{ isEmpty, uploadDir } = require('../../helpers/upload-helper');
 const {userAuthenticated} = require('../../helpers/authentication.js');
 
-router.all('/*', userAuthenticated, (req, res, next)=>{
+router.all('/*', (req, res, next)=>{
   req.app.locals.layout = 'admin';
   next();
 });
 
+//MAKE THIS SUPERUSER
 router.get('/', (req, res)=>{
   Recipe.find({})
     .then(recipes=>{
@@ -105,7 +106,7 @@ router.delete('/:id', (req, res)=>{
                         }
                         recipe.remove().then(recipeRemoved=>{
                           req.flash('success_message', `Recipe "${recipe.title}" was deleted succesfully`);
-                          res.redirect('/admin/recipes/recipes');
+                          res.redirect('/admin/recipes');
                         });
                     });
             });

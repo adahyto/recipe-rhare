@@ -4,7 +4,6 @@ const Recipe = require('../../models/Recipe');
 const Comment = require('../../models/Comment');
 const {userAuthenticated} = require('../../helpers/authentication.js');
 
-
 router.all('/*', userAuthenticated, (req, res, next)=>{
     req.app.locals.layout = 'admin';
     next();
@@ -23,7 +22,6 @@ router.get('/my-comments', (req, res)=>{
     .populate('comments')
     .populate('user')
     .then(recipes=>{
-      console.log(recipes.comments);
       res.render('admin/comments/my-comments', {recipes: recipes});
     });
 });
@@ -48,7 +46,7 @@ router.delete('/:id', (req, res)=>{
     Comment.remove({_id: req.params.id}).then(result=>{
       Recipe.findOneAndUpdate({comments: req.params.id}, {$pull: {comments: req.params.id}}, (err, data)=>{
         if(err) console.log(err);
-        res.redirect('/admin/comments');
+        res.redirect('/admin/comments/my-comments');
       });
     });
 });
