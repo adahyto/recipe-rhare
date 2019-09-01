@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>VeganShare</title>
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/home.css" rel="stylesheet">
-    <link href="/css/recipe.css" rel="stylesheet">
-    <link href="/css/flatremix.css" rel="stylesheet">
-  </head>
-  <body>
-{{>home/home-nav}}
-    <div class="container-fluid">
-      {{#if errors}}
-{{#each errors}}
-          <div class="alert alert-danger">
-            {{message}}
-          </div>
-{{/each}}
-{{/if}}
-{{> home/form-msgs}}
-{{{body}}}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>VeganShare</title>
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/home.css" rel="stylesheet">
+  <link href="/css/recipe.css" rel="stylesheet">
+  <link href="/css/flatremix.css" rel="stylesheet">
+</head>
+
+<body>
+  {{>home/home-nav}}
+  <div class="container-fluid">
+    {{#if errors}}
+    {{#each errors}}
+    <div class="alert alert-danger">
+      {{message}}
     </div>
-{{>home/footer}}
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.bundle.min.js"></script>
-  </body>
+    {{/each}}
+    {{/if}}
+    {{> home/form-msgs}}
+    {{{body}}}
+  </div>
+  {{>home/footer}}
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>

@@ -69,30 +69,30 @@ passport.use(new LocalStrategy({usernameField: 'email'}, (email, password, done)
     });
 }));
 
-passport.use(new GoogleStrategy({
-    clientID: 'x',
-    clientSecret: 'x',
-    callbackURL: "/auth/google/callback"
-  },
-  (token, tokenSecret, profile, done)=>{
-    User.findOne({googleId: profile.id})
-      .then(user=>{
-        if(!user){
-          const newUser = new User({
-            googleId: profile.id,
-            nickName: profile.displayName
-          });
-          newUser.save().then(savedUser=>{
-            return savedUser;
-          });
-        }else{
-            console.log('user already registered');
-            // LOGIN THAT USER
-        }
-      });
-      console.log(profile);
-  }
-));
+// passport.use(new GoogleStrategy({
+//     clientID: 'x',
+//     clientSecret: 'x',
+//     callbackURL: "/auth/google/callback"
+//   },
+//   (token, tokenSecret, profile, done)=>{
+//     User.findOne({googleId: profile.id})
+//       .then(user=>{
+//         if(!user){
+//           const newUser = new User({
+//             googleId: profile.id,
+//             nickName: profile.displayName
+//           });
+//           newUser.save().then(savedUser=>{
+//             return savedUser;
+//           });
+//         }else{
+//             console.log('user already registered');
+//             // LOGIN THAT USER
+//         }
+//       });
+//       console.log(profile);
+//   }
+// ));
 
 passport.serializeUser(function(user, done){
   done(null, user.id);
@@ -112,13 +112,13 @@ router.post('/login', (req, res, next)=>{
   })(req, res, next);
 });
 
-router.get('/auth/google',
-  passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login'] })
-);
-router.get('/auth/google/callback',
-  passport.authenticate('google', { failureRedirect: '/login' }), (req, res)=>{
-    res.redirect('/admin');
-});
+// router.get('/auth/google',
+//   passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login'] })
+// );
+// router.get('/auth/google/callback',
+//   passport.authenticate('google', { failureRedirect: '/login' }), (req, res)=>{
+//     res.redirect('/admin');
+// });
 
 router.get('/logout', (req, res)=>{
   req.logOut();

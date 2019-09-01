@@ -4,8 +4,8 @@ const URLSlugs = require('mongoose-url-slugs');
 
 const RecipeSchema = new Schema({
   user: {
-      type: Schema.Types.ObjectId,
-      ref: 'users'
+    type: Schema.Types.ObjectId,
+    ref: 'users'
   },
   date: {
     type: Date,
@@ -19,19 +19,19 @@ const RecipeSchema = new Schema({
     type: String,
     required: true
   },
-    slug: {
-      type: String
-    },
+  slug: {
+    type: String
+  },
   short: {
-      type: String,
-      required: true
+    type: String,
+    required: true
   },
   body: {
     type: String,
     required: true
   },
   file: {
-      type: String
+    type: String
   },
   comments: [{
     type: Schema.Types.ObjectId,
@@ -39,5 +39,5 @@ const RecipeSchema = new Schema({
   }]
 });
 
-RecipeSchema.plugin(URLSlugs('title', {field: 'slug'}));
+RecipeSchema.plugin(URLSlugs('title', { field: 'slug' }));
 module.exports = mongoose.model('recipe', RecipeSchema);

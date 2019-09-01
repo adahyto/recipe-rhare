@@ -14,35 +14,35 @@
     <hr>
     <br>
     {{#each recipe.comments}}
-          <div class="media mb-4">
-            <div class="media-body">
-              <p class="mt-0">author: <strong>{{user.nickName}}</strong>, date: {{generateDate date 'MMMM Do YYYY'}}</p>
-              <p>{{body}}</p>
-            </div>
-          </div>
+    <div class="media mb-4">
+      <div class="media-body">
+        <p class="mt-0">author: <strong>{{user.nickName}}</strong>, date: {{generateDate date 'MMMM Do YYYY'}}</p>
+        <p>{{body}}</p>
+      </div>
+    </div>
     {{/each}}
     {{#if user}}
     {{#if recipe.allowComments}}
-          <div class="card my-4">
-            <h5 class="card-header">Leave a Comment:</h5>
-            <div class="card-body">
-              <form action="/admin/comments" method="post">
-                <div class="form-group">
-                  <textarea name="body" class="form-control" rows="3"></textarea>
-                  <input type="hidden" name="id" value="{{recipe.id}}">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
-            </div>
+    <div class="card my-4">
+      <h5 class="card-header">Leave a Comment:</h5>
+      <div class="card-body">
+        <form action="/admin/comments" method="post">
+          <div class="form-group">
+            <textarea name="body" class="form-control" rows="3"></textarea>
+            <input type="hidden" name="id" value="{{recipe.id}}">
           </div>
-        {{else}}
-        <p>comments not allowed for this post</p>
-          <br>
-          <hr>
-          {{/if}}
-      {{else}}
-             <h5><a href="/login">login for comments</a></h5>
-             <br>
-     {{/if}}
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+    {{else}}
+    <p>comments not allowed for this post</p>
+    <br>
+    <hr>
+    {{/if}}
+    {{else}}
+    <h5><a href="/login">login for comments</a></h5>
+    <br>
+    {{/if}}
   </div>
 </div>

@@ -1,22 +1,22 @@
 <br>
 <div class="row">
   {{#each recipes}}
-        <div class="col-md-6 text-center">
-          <div class="card-body">
-            <img style="width:155px;" class="img-responsive" src="/uploads/{{file}}" alt="Card image cap">
-            <h2 class="card-title">{{title}}</h2>
-            <p class="card-text">{{short}}</p>
-            <a href="/recipe/{{slug}}" class="btn btn-primary">Show More &rarr;</a>
-          </div>
-          <div class="card-footer text-muted">
-                Posted on {{generateDate date 'MMMM Do YYYY'}} by
-                <a href="#">{{user.nickName}}</a>
-          </div>
-        </div>
+  <div class="col-md-6 text-center">
+    <div class="card-body">
+      <img style="width:155px;" class="img-responsive" src="/uploads/{{file}}" alt="Card image cap">
+      <h2 class="card-title">{{title}}</h2>
+      <p class="card-text">{{short}}</p>
+      <a href="/recipe/{{slug}}" class="btn btn-primary">Show More &rarr;</a>
+    </div>
+    <div class="card-footer text-muted">
+      Posted on {{generateDate date 'MMMM Do YYYY'}} by
+      <a href="#">{{user.nickName}}</a>
+    </div>
+  </div>
   {{/each}}
-      <div class="col-md-12">
-        <ul class="pagination justify-content-center mb-4">
-          {{#paginate current=current pages=pages}}{{/paginate}}
-        </ul>
-      </div>
+  <div class="col-md-12">
+    <ul class="pagination justify-content-center mb-4">
+      {{#paginate current=current pages=pages}}{{/paginate}}
+    </ul>
+  </div>
 </div>

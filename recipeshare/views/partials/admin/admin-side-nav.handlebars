@@ -1,47 +1,55 @@
-      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-        {{#if user}}
-          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="User">
-            <a class="nav-link" href="#">
-              <i class="fa fa-fw fa-user"></i>
-              <span class="nav-link-text">{{user.nickName}}</span>
-            </a>
-          </li>
-        {{/if}}
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="/admin">
-            <i class="fab fa-connectdevelop"></i>
-            <span class="nav-link-text">Dashboard</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapsePosts" data-parent="#exampleAccordion">
-          <i class="fas fa-flask"></i>
-            <span class="">Recipes</span>
-          </a>
-          <ul class="sidenav-second-level collapse" id="collapsePosts">
-            <li>
+<ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+  {{#if user}}
+  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="User">
+    <a class="nav-link" href="#">
+      <i class="fa fa-fw fa-user"></i>
+      <span class="nav-link-text">{{user.nickName}}</span>
+    </a>
+  </li>
+  {{/if}}
+  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+    <a class="nav-link" href="/admin">
+      <i class="fab fa-connectdevelop"></i>
+      <span class="nav-link-text">Dashboard</span>
+    </a>
+  </li>
+  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapsePosts"
+      data-parent="#exampleAccordion">
+      <i class="fas fa-flask"></i>
+      <span class="">Recipes</span>
+    </a>
+    <ul class="sidenav-second-level collapse" id="collapsePosts">
+      {{!-- ONLY FOR SUPER USER  <li>
               <a href="/admin/recipes">All Recipes</a>
-            </li>
-            <li>
-              <a href="/admin/recipes/my-recipes">My Recipes</a>
-            </li>
-            <li>
-              <a href="/admin/recipes/create">Create New Recipe</a>
-        </li>
-          </ul>
-          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapsePostsTwo" data-parent="#exampleAccordion">
-            <i class="far fa-keyboard"></i>
-              <span class="">Comments</span>
-            </a>
-            <ul class="sidenav-second-level collapse" id="collapsePostsTwo">
-              <li>
-                <a href="/admin/comments/my-comments">My-comments</a>
-              </li>
-              <li>
-                <a href="/admin/comments">Comments</a>
-          </li>
-          </ul>
-          </li>
-        </li>
-      </ul>
+            </li> --}}
+      <li>
+        <a href="/">All Recipes</a>
+      </li>
+      <li>
+        <a href="/admin/recipes/my-recipes">My Recipes</a>
+      </li>
+      <li>
+        <a href="/admin/recipes/create">Create New Recipe</a>
+      </li>
+    </ul>
+  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapsePostsTwo"
+      data-parent="#exampleAccordion">
+      <i class="far fa-keyboard"></i>
+      <span class="">Comments</span>
+    </a>
+    <ul class="sidenav-second-level collapse" id="collapsePostsTwo">
+      <li>
+        <a href="/admin/comments/my-comments">Comments Received</a>
+      </li>
+       <li>
+        <a href="/admin/comments/">Comments Posted</a>
+      </li>
+      {{!-- SUPERUSER <li>
+        <a href="/admin/comments">Comments</a>
+      </li> --}}
+    </ul>
+  </li>
+  </li>
+</ul>
