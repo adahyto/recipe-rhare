@@ -1,4 +1,4 @@
 // mongoDB database URL
 module.exports={
-  mongoDbUrl:'mongodb://localhost:27017/veganshare'
+  mongoDbUrl:'mongodb://adam:Fedora16#@ds215338.mlab.com:15338/recipes'
 };
