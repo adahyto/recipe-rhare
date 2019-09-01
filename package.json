@@ -13,6 +13,9 @@
     "node",
     "mongo"
   ],
+  "engines": {
+    "node": "10.x"
+  },
   "author": "Adam Tomas",
   "license": "ISC",
   "dependencies": {
