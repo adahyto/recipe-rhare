@@ -9,7 +9,7 @@ const upload = require('express-fileupload');
 const session = require('express-session');
 const flash = require('connect-flash');
 const passport = require('passport');
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8081;
 
 // database
 const {mongoDbUrl} = require('./config/database');
