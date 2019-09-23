@@ -2,7 +2,7 @@
 
 # Recipe-Share
 
-[Live demo](https://aria-demo-deploy.herokuapp.com)
+[Live demo](https://vegan-share.herokuapp.com/)
 
 ## Table of contents
 
