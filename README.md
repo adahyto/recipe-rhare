@@ -1,57 +1,48 @@
+
+
 # Recipe-Share
 
-Share your VEGAN recipes with NodeJS
-------------------------------------
+[Live demo](https://aria-demo-deploy.herokuapp.com)
 
-Description:
+## Table of contents
 
-Idea is to create social network to make sharing veganism easy.
+###
 
-Containing profile board with recipes, chat, recipes likes, easy recipe sending & saving and maby even real foodsharing helper options.
+- [General info](#general-info)
+  - [Introduction](#introduction)
+  ###
+- [Working example description](#working-example-description)
+  ###
+- [Dev setup](#dev-setup)
 
-Idea is to also create :
+#
 
--Vegan mentoring program 
+## General info
 
--Help vegan begginners using recipe sharing, chat & sharing diet calendar.
+###
 
--Vegan freelancer wall.
+#### Introduction
 
--Connect user profile with happyCow 
+- It's CMS focused on making recipe sharing easy.
+- Guest user can browse the recipes on the landing page and
+    is ale to login/register.
+- Each registered user can create recipe posts with photo and is able to enable/disable commenting on the.
+- Every recipe is assigned to one of categories created by this or other user.
+- Registered users are able to publish comments.
 
+##
 
-Installation:
-- install MongoDb
-$ sudo apt install mongodb-server
--run MongoDb
-$ mongod
+## Working example description
 
--run the app
-$ npm i
-$ npm start
-
-
-
-Usage:
-
-For now you can browse recipes on landing page as a guest user.
-You can register new account and login ('passport-local').
-Users are able to add new recipes with, photo, comment option and sign it to existing category.
-Users can create new categories and submitt comments.
-For now all users have access to /admin/comments 0- role of that view is to allow admin to allow/disallow particular comment 
-There is view for confirming comments under your recipes admin/comments - but it is not ready #issues
+##### Introduction
 
 
-Contributing: 
+#
 
-You and your ideas are more than welcome here!
-You can grab issues, or just fork It and show me the results of your imagination.
+## Dev-setup
 
+#
 
+## Further help
 
-Adam Tomaś
-
-
-
-License:
-GNU GPLv3 
+adahy.to@gmail.com
