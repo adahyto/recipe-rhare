@@ -40,7 +40,8 @@
 #
 
 ## Dev-setup
-```$ npm i 
+```
+   $ npm i 
    $ nodemon index.js
 ``` 
 #
