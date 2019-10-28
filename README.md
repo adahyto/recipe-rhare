@@ -1,6 +1,6 @@
 
 
-# Recipe-Share
+# recipe-share
 
 [Live demo](https://vegan-share.herokuapp.com/)
 
