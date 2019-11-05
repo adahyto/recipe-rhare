@@ -29,7 +29,7 @@
     "faker": "^4.1.0",
     "method-override": "^2.3.10",
     "moment": "^2.21.0",
-    "mongoose": "^5.0.5",
+    "mongoose": "^5.7.5",
     "mongoose-url-slugs": "^1.0.2",
     "nodemon": "^1.14.12",
     "passport": "^0.4.0",
