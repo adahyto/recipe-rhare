@@ -2,8 +2,6 @@
 
 # recipe-share
 
-[Live demo](https://vegan-share.herokuapp.com/)
-
 ## Table of contents
 
 ###
