@@ -28,7 +28,7 @@
     "express-session": "^1.15.6",
     "faker": "^4.1.0",
     "method-override": "^2.3.10",
-    "moment": "^2.21.0",
+    "moment": "^2.29.4",
     "mongoose": "^5.0.5",
     "mongoose-url-slugs": "^1.0.2",
     "nodemon": "^1.14.12",
