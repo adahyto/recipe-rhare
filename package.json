@@ -23,7 +23,7 @@
     "body-parser": "^1.18.2",
     "connect-flash": "^0.1.1",
     "express": "^4.16.2",
-    "express-fileupload": "^0.4.0",
+    "express-fileupload": "^1.1.10",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
     "faker": "^4.1.0",
